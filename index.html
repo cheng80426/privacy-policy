@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Style Calculator - 隱私政策</title>
+    <title>Privacy Policy - 個性計算機 / MyStyleCalc</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -29,75 +29,175 @@
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
+        
+        /* 語言切換按鈕樣式 */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #0066cc;
+            background: white;
+            color: #0066cc;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #0066cc;
+            color: white;
+        }
+        
+        /* 隱藏非活動語言的內容 */
+        body[lang="zh-TW"] .en,
+        body[lang="en"] .zh {
+            display: none;
+        }
     </style>
 </head>
-<body>
-    <h1>My Style Calculator - 隱私政策</h1>
-    <p class="last-updated">最後更新時間：2026 年 3 月</p>
+<body lang="zh-TW">
+    <div class="lang-switch">
+        <button id="btn-zh" class="lang-btn active" onclick="setLanguage('zh-TW')">繁體中文</button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
+    </div>
+
+    <h1 class="zh">個性計算機 - 隱私政策</h1>
+    <h1 class="en">MyStyleCalc - Privacy Policy</h1>
+    
+    <p class="last-updated zh">最後更新時間：2026 年 3 月</p>
+    <p class="last-updated en">Last Updated: March 2026</p>
 
     <section>
-        <h2>1. 概述</h2>
-        <p>My Style Calculator（以下簡稱「本應用程式」）致力於保護您的隱私。本隱私政策說明我們如何收集、使用和保護您的資訊。</p>
+        <h2 class="zh">1. 概述</h2>
+        <h2 class="en">1. Overview</h2>
+        <p class="zh">個性計算機（以下簡稱「本應用程式」）致力於保護您的隱私。本隱私政策說明我們如何收集、使用和保護您的資訊。</p>
+        <p class="en">MyStyleCalc (hereinafter referred to as "the App") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information.</p>
     </section>
 
     <section>
-        <h2>2. 我們收集的資訊</h2>
-        <p>My Style Calculator 本身<strong>不會收集任何個人資訊</strong>。應用程式的所有數據處理都在您的設備上進行。</p>
+        <h2 class="zh">2. 我們收集的資訊</h2>
+        <h2 class="en">2. Information Collection</h2>
+        <p class="zh">個性計算機 本身<strong>不會收集任何個人資訊</strong>。應用程式的所有數據處理都在您的設備上進行。</p>
+        <p class="en">MyStyleCalc itself <strong>does not collect any personal information</strong>. All data processing of the App is performed on your device.</p>
 
-        <h3>2.1 Google AdMob 廣告</h3>
-        <p>本應用程式使用 Google AdMob 顯示廣告。Google AdMob 可能會收集以下資訊：</p>
-        <ul>
+        <h3 class="zh">2.1 Google AdMob 廣告</h3>
+        <h3 class="en">2.1 Google AdMob Ads</h3>
+        <p class="zh">本應用程式使用 Google AdMob 顯示廣告。Google AdMob 可能會收集以下資訊：</p>
+        <p class="en">The App uses Google AdMob to display advertisements. Google AdMob may collect the following information:</p>
+        <ul class="zh">
             <li>設備標識符（IDFA）</li>
             <li>廣告追蹤資訊</li>
             <li>粗略位置資訊</li>
         </ul>
-        <p>詳細資訊請參閱 <a href="https://policies.google.com/privacy">Google 隱私政策</a>。</p>
+        <ul class="en">
+            <li>Device identifiers (IDFA)</li>
+            <li>Advertising tracking information</li>
+            <li>Coarse location information</li>
+        </ul>
+        <p class="zh">詳細資訊請參閱 <a href="https://policies.google.com/privacy">Google 隱私政策</a>。</p>
+        <p class="en">For more information, please refer to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-        <h3>2.2 App 追蹤透明度（ATT）</h3>
-        <p>本應用程式會要求您授予「追蹤」權限，以向 Google AdMob 提供個性化廣告。您可以在應用程式設定中隨時更改此權限。</p>
+        <h3 class="zh">2.2 App 追蹤透明度（ATT）</h3>
+        <h3 class="en">2.2 App Tracking Transparency (ATT)</h3>
+        <p class="zh">本應用程式會要求您授予「追蹤」權限，以向 Google AdMob 提供個性化廣告。您可以在應用程式設定中隨時更改此權限。</p>
+        <p class="en">The App will request "Tracking" permission to provide personalized ads via Google AdMob. You can change this permission at any time in the app settings.</p>
 
-        <h3>2.3 應用程式內購買</h3>
-        <p>贊助功能透過 Apple App Store 處理。Apple 會處理您的付款資訊。我們<strong>不會存儲任何付款資訊</strong>。詳細資訊請參閱 <a href="https://www.apple.com/privacy/">Apple 隱私政策</a>。</p>
+        <h3 class="zh">2.3 應用程式內購買</h3>
+        <h3 class="en">2.3 In-App Purchases</h3>
+        <p class="zh">贊助功能透過 Apple App Store 處理。Apple 會處理您的付款資訊。我們<strong>不會存儲任何付款資訊</strong>。詳細資訊請參閱 <a href="https://www.apple.com/privacy/">Apple 隱私政策</a>。</p>
+        <p class="en">Sponsorship features are handled through the Apple App Store. Apple processes your payment information. We <strong>do not store any payment information</strong>. For more information, please refer to the <a href="https://www.apple.com/privacy/">Apple Privacy Policy</a>.</p>
     </section>
 
     <section>
-        <h2>3. 我們不會做什麼</h2>
-        <ul>
+        <h2 class="zh">3. 我們不會做什麼</h2>
+        <h2 class="en">3. What We Don't Do</h2>
+        <ul class="zh">
             <li>❌ 不會收集您的個人資訊（姓名、電子郵件、電話號碼等）</li>
             <li>❌ 不會建立用戶帳戶</li>
             <li>❌ 不會存儲您的計算歷史記錄或任何應用程式數據到遠程伺服器</li>
             <li>❌ 不會與第三方分享您的個人資訊（除非法律要求）</li>
         </ul>
+        <ul class="en">
+            <li>❌ Does NOT collect your personal information (name, email, phone number, etc.)</li>
+            <li>❌ Does NOT create user accounts</li>
+            <li>❌ Does NOT store your calculation history or any app data on remote servers</li>
+            <li>❌ Does NOT share your personal information with third parties (unless required by law)</li>
+        </ul>
     </section>
 
     <section>
-        <h2>4. 資訊安全</h2>
-        <p>我們採取合理措施保護您的資訊安全。由於 My Style Calculator 不收集或存儲個人資訊，您的隱私已經得到最大程度的保護。</p>
+        <h2 class="zh">4. 資訊安全</h2>
+        <h2 class="en">4. Information Security</h2>
+        <p class="zh">我們採取合理措施保護您的資訊安全。由於 個性計算機 不收集或存儲個人資訊，您的隱私已經得到最大程度的保護。</p>
+        <p class="en">We take reasonable measures to protect your information security. Since MyStyleCalc does not collect or store personal information, your privacy is protected to the greatest extent possible.</p>
     </section>
 
     <section>
-        <h2>5. 兒童隱私</h2>
-        <p>My Style Calculator 適合所有年齡的用戶。我們不會故意向兒童收集個人資訊。</p>
+        <h2 class="zh">5. 兒童隱私</h2>
+        <h2 class="en">5. Children's Privacy</h2>
+        <p class="zh">個性計算機 適合所有年齡的用戶。我們不會故意向兒童收集個人資訊。</p>
+        <p class="en">MyStyleCalc is suitable for users of all ages. We do not knowingly collect personal information from children.</p>
     </section>
 
     <section>
-        <h2>6. 政策變更</h2>
-        <p>如我們對本隱私政策進行重大變更，我們將在應用程式中通知您，或透過其他合理的方式告知您。</p>
+        <h2 class="zh">6. 政策變更</h2>
+        <h2 class="en">6. Policy Changes</h2>
+        <p class="zh">如我們對本隱私政策進行重大變更，我們將在應用程式中通知您，或透過其他合理的方式告知您。</p>
+        <p class="en">If we make significant changes to this Privacy Policy, we will notify you through the app or other reasonable means.</p>
     </section>
 
     <section>
-        <h2>7. 聯絡我們</h2>
-        <p>如您對本隱私政策有任何疑問，請通過以下方式與我們聯絡：</p>
+        <h2 class="zh">7. 聯絡我們</h2>
+        <h2 class="en">7. Contact Us</h2>
+        <p class="zh">如您對本隱私政策有任何疑問，請通過以下方式與我們聯絡：</p>
+        <p class="en">If you have any questions about this Privacy Policy, please contact us at:</p>
         <p>
-            <strong>開發者：</strong> Allen Cheng<br>
-            <strong>電子郵件：</strong> 開發者帳戶關聯電子郵件<br>
-            <strong>應用程式：</strong> My Style Calculator
+            <strong class="zh">開發者：</strong><strong class="en">Developer: </strong> Allen Cheng<br>
+            <strong class="zh">電子郵件：</strong><strong class="en">Email: </strong> allen.cisco@gmail.com<br>
+            <strong class="zh">應用程式：</strong><strong class="en">App: </strong> <span class="zh">個性計算機</span><span class="en">MyStyleCalc</span>
         </p>
     </section>
 
     <hr>
     <p style="text-align: center; color: #666; font-size: 0.9em;">
-        © 2026 My Style Calculator. 版權所有。
+        © 2026 <span class="zh">個性計算機</span><span class="en">MyStyleCalc</span>. <span class="zh">版權所有。</span><span class="en">All rights reserved.</span>
     </p>
+
+    <script>
+        function setLanguage(lang) {
+            document.body.setAttribute('lang', lang);
+            
+            // 更新按鈕狀態
+            document.getElementById('btn-zh').classList.remove('active');
+            document.getElementById('btn-en').classList.remove('active');
+            
+            if (lang === 'zh-TW') {
+                document.getElementById('btn-zh').classList.add('active');
+            } else {
+                document.getElementById('btn-en').classList.add('active');
+            }
+
+            // 存儲偏好
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        // 頁面加載時自動偵測語言
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred-lang');
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            if (savedLang) {
+                setLanguage(savedLang);
+            } else if (userLang.startsWith('en')) {
+                setLanguage('en');
+            } else {
+                setLanguage('zh-TW');
+            }
+        };
+    </script>
 </body>
 </html>
